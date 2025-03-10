@@ -1,0 +1,83 @@
+# Rock-Paper-Scissors Game
+
+## Overview
+This is a simple **Rock-Paper-Scissors** game implemented in JavaScript. It allows users to play manually by clicking buttons or pressing specific keys on the keyboard. Additionally, an **auto-play mode** is included, which repeatedly plays the game every second.
+
+## Features
+- **Manual Play:**
+  - Click buttons to select **Rock, Paper, or Scissors**.
+  - Press keys (`R`, `P`, or `S`) to make a choice.
+- **Autoplay Mode:**
+  - Toggles on/off with a button.
+  - The game runs every second automatically.
+- **Score Tracking:**
+  - Wins, losses, and ties are stored in **localStorage**.
+  - The score persists even after refreshing the page.
+- **Dynamic UI Updates:**
+  - Displays player and computer choices with corresponding emoji images.
+  - Shows the updated score after each round.
+- **Keyboard Shortcuts:**
+  - `R` → Rock
+  - `P` → Paper
+  - `S` → Scissors
+- **Event Handling:**
+  - Uses JavaScript `addEventListener()` to handle button clicks and keyboard inputs.
+
+## How It Works
+1. The user selects Rock, Paper, or Scissors (via buttons or keyboard).
+2. The computer randomly picks one of the three choices.
+3. The game logic determines the winner based on the standard rules:
+   - **Rock beats Scissors**
+   - **Scissors beats Paper**
+   - **Paper beats Rock**
+   - **Same choice results in a Tie**
+4. The result is displayed on the screen.
+5. The score updates and is saved in `localStorage`.
+
+## Code Breakdown
+### 1. **JavaScript Variables**
+- `isAutoPlaying`: Boolean variable to check if auto-play mode is active.
+- `intervalID`: Stores the interval for auto-play.
+- `score`: Stores wins, losses, and ties, retrieved from `localStorage`.
+
+### 2. **Functions**
+#### `pickComputerMove()`
+- Generates a random number.
+- Assigns **Rock, Paper, or Scissors** based on probability.
+
+#### `playGame(player_choice)`
+- Determines the winner based on game rules.
+- Updates the score.
+- Saves the score to `localStorage`.
+- Updates the UI.
+
+#### `autoPlay()`
+- Uses `setInterval()` to repeatedly play the game every second.
+- Stops autoplay when toggled off with `clearInterval()`.
+
+#### `updateScoreElement()`
+- Updates the displayed score in the UI.
+
+### 3. **Event Listeners**
+- `click` events for **Rock, Paper, and Scissors** buttons.
+- `keydown` events for keyboard shortcuts (`R`, `P`, `S`).
+
+## Installation & Usage
+1. Clone or download the repository.
+2. Open `index.html` in a browser.
+3. Play the game using buttons or keyboard shortcuts.
+4. Toggle auto-play if desired.
+
+## Technologies Used
+- **HTML** (for structure)
+- **CSS** (for styling)
+- **JavaScript** (for logic & interactivity)
+
+## Future Improvements
+- Add sound effects.
+- Enhance UI with animations.
+- Implement multiplayer mode.
+
+---
+Enjoy playing! 🚀
+
