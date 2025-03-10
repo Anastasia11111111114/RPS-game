@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Paper-Scissors-Rock</title>
+        <link rel="stylesheet" href="SPR12.css">
+    </head>
+    <body>
+        <p class="main-title">SCISSORS PAPER ROCK!!!</p>
+
+        <button class="spr-buttons js-scissors-button" >
+            <img class="images" src="spr-icons/scissors-emoji.png">
+        </button>
+        <button class="spr-buttons js-paper-button">
+            <img class="images" src="spr-icons/paper-emoji.png">
+        </button>
+        <button class="spr-buttons js-rock-button">
+            <img class="images" src="spr-icons/rock-emoji.png">
+        </button>
+        <p class='js-result result'></p>
+        <p class='js-moves' ></p>
+        <p class="js-score score"></p>
+        <button class="reset-score-button" onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+        updateScoreElement();
+        ">Reset score</button>
+        <button class="reset-score-button" onclick="
+        autoPlay();
+        ">Auto Play</button>
+        
+
+        <script src="SPR12.js"></script>
+    </body>
+</html>
